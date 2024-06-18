@@ -191,3 +191,6 @@ bash scripts/ood_after_cil_finetune/regmix/cifar100_test_ood.sh icarl 10
 ```
 
 
+## Acknowledgements
+
+The code and the framework are based on the repos [OpenOOD](https://github.com/Jingkang50/OpenOOD/tree/main?tab=coc-ov-file)
