@@ -1,0 +1,15 @@
+# resnet 18 for benchmarking incremental method on imagenet1k
+
+network:
+  name: resnet18_224x224
+  num_classes: '@{dataset.num_classes}' # this should reflect # class in total, # class for each il learning is
+  pretrained: False 
+  num_gpus: '@{num_gpus}'
+  checkpoint: none
+  backbone:
+    name: resnet18_224x224
+    num_classes: '@{dataset.num_classes}'
+    image_size: '@{dataset.image_size}'
+    pretrained: False
+    checkpoint: none
+    num_gpus: '@{num_gpus}'

@@ -1,0 +1,47 @@
+exp_name: "'@{trainer.name}'_'@{dataset.name}'_'@{network.name}'_increment_pt'@{increment}'"
+output_dir: ./results/results_cil_only/
+save_output: True
+merge_option: default
+mark: default
+
+num_gpus: 1
+num_workers: 4
+num_machines: 1
+machine_rank: 0
+
+num_tasks: None
+increment: 10 # use interchangeably with num task (10 class per task)
+fixed_memory: false
+
+device: 'cuda:0'
+# device: ["cuda:0","cuda:1","cuda:2","cuda:3"]
+seed: 1993
+
+preprocessor:
+  name: base
+
+network:
+  pretrained: False
+
+pipeline:
+  name: cil_only
+
+trainer:
+  name: incremental_bic
+
+optimizer:
+  epochs: 170 #170
+  epochs_bias_correction: 170 #170
+  lrate: 0.1
+  milestones: [60, 100, 140]
+  lrate_decay: 0.1
+  split_ratio: 0.1
+  T: 2
+  weight_decay: 0.0002
+  num_workers: 8
+
+recorder:
+  name: base
+  save_all_models: False
+  save_scores: True
+  save_csv: False
