@@ -6,6 +6,7 @@ OpenCIL offers a flexible algorithmic template that allows users to effortlessly
 Moreover, it provides a new evaluation protocol to fairly and systematically compare diverse OOD detection methods among different incremental steps, and comprehensively evaluate 60 baselines that are composed by 15 OOD detectors and 4 CIL models.
 We further propose a new baseline called BER that can effectively mitigate the common issues in the 60 baselines.
 
+<<<<<<< HEAD
 ## Setup
 
 ### Environment
@@ -166,3 +167,6 @@ bash scripts/ood_after_cil_finetune/regmix/cifar100_test_ood.sh icarl 10
 ```
 
 Note that the finetuned CIL model should be prepared first.
+=======
+## To be update
+>>>>>>> 922c0b232ad94d89d7dd091875817522ab813101
