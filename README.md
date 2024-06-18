@@ -91,6 +91,13 @@ To be updated
 
 ## Usage
 Scripts are mainly used in this repository. They are defined in ```scripts``` and there are four main types of scripts:
+
+Fast replay all experiences
+```
+bash run.sh
+```
+
+
 ### Training a CIL method
 Scripts for training any supported CIL methods are mostly defined in 
 ```scripts/cil_only/$CIL_METHOD$```. We have benchmarked 4 most common class incremental learning methods in total which are:
