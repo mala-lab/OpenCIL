@@ -128,7 +128,18 @@ We have 9 most common OOD scoring function being implemented in this repository 
  [Paper](https://arxiv.org/abs/1706.02690)
 - EBO: Energy-based Out-of-distribution Detection.
  [Paper](https://arxiv.org/abs/2010.03759)
-- KLM: Scaling Out-of-Distribution Detection for Real-World Settings. [Paper](https://proceedings.mlr.press/v162/hendrycks22a/hendrycks22a.pdf)
+- MaxLogit: Scaling out-of-distribution detection for real-world settings
+ [Paper](https://proceedings.mlr.press/v162/hendrycks22a/hendrycks22a.pdf)
+- GEN: Pushing the limits of softmax-based out-of-distribution detection
+ [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_GEN_Pushing_the_Limits_of_Softmax-Based_Out-of-Distribution_Detection_CVPR_2023_paper.pdf)
+- ReAct: Out-of-distribution detection with rectified activations
+ [Paper](https://openreview.net/pdf?id=IBVBtz_sRSm)
+- KLM: Scaling Out-of-Distribution Detection for Real-World Settings. 
+ [Paper](https://proceedings.mlr.press/v162/hendrycks22a/hendrycks22a.pdf)
+- Relation: Neural relation graph: A unified framework for identifying label noise and outlier data
+ [Paper](https://arxiv.org/abs/2301.12321)
+- NNGuide:  Nearest neighbor guidance for out-of-distribution detection
+ [Paper](https://arxiv.org/abs/2309.14888)
 
 #### How to run
 An example of testing iCaRL CIL model trained on CIFAR100 using MSP scoring function with 10 tasks is shown below
@@ -140,6 +151,19 @@ bash scripts/ood_after_cil/icarl/icarl_baseood/cifar100_test_ood.sh 10
 ### Fine-tuning-based OOD detection methods on pretrained CIL model
 Scripts for finetuning any supported OOD detection methods on pretrained CIL methods are mostly defined in 
 ```scripts/cil_only_finetune/$OOD_METHOD$```. We have benchmarked 6 most common class incremental learning methods in total which are:
+
+- LogitNorm: Mitigating neural network overconfidence with logit normalization
+ [Paper](https://arxiv.org/abs/2205.09310)
+- T2FNorm: Extremely simple scaled train-time feature normalization for ood detection  
+ [Paper](https://openaccess.thecvf.com/content/CVPR2024W/TCV2024/papers/Regmi_T2FNorm_Train-time_Feature_Normalization_for_OOD_Detection_in_Image_Classification_CVPRW_2024_paper.pdf)
+- AUGMIX: A simple data processing method to improve robustness and uncertainty
+ [Paper](https://arxiv.org/pdf/1912.02781)
+- REGMIX: Mixup as a regularizer can surprisingly improve accuracy and out distribution robustness
+ [Paper](https://arxiv.org/abs/2206.14502)
+- VOS: Learning what you don’t know by virtual outlier synthesis
+ [Paper](https://openreview.net/forum?id=TW7d65uYu5M)
+- NPOS: Non-parametric outlier synthesis
+ [Paper](https://openreview.net/forum?id=JHklpEZqduQ)
 
 
 
