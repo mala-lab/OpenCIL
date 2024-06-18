@@ -75,7 +75,7 @@ Furthermore, we only can use the current task ID data to train this extra classi
 
 <b>3. OOD dataset for testing pertrained or finetuned CIL model </b>
 
-After training an class incremental learning model, we should test its performance on ood detection score using other ood dataset.
+After training or finetuning an class incremental learning model, we should test its performance on ood detection score using other ood dataset.
 
 Experiments should be conducted on both small scale and large scale dataset to demonstrate model's robustness:
 
@@ -83,7 +83,7 @@ Experiments should be conducted on both small scale and large scale dataset to d
     - nearood: cifar10, tin.
     - farood: mnist, svhn, texture, places365.
 - Large scale dataset→ Training CIL model on Imagenet1K: 1000 classes and then perform testing on OOD function on the following OOD dataset:
-    - nearood: species, inaturalist, openimageo, imageneto.
+    - nearood: species, inaturalist, openimage_o, imagenet_o.
     - farood: texture, mnist.
 
 ## Weights and preliminary results
