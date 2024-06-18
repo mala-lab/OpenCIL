@@ -1,4 +1,4 @@
-name: openood
+name: opencil
 channels:
   - pytorch
   - conda-forge
