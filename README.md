@@ -92,7 +92,7 @@ To be updated
 ## Usage
 Scripts are mainly used in this repository. They are defined in ```scripts``` and there are four main types of scripts:
 
-Fast replay all experiences
+### Fast replay all experiences
 ```
 bash run.sh
 ```
@@ -141,29 +141,24 @@ bash scripts/ood_after_cil/icarl/icarl_baseood/cifar100_test_ood.sh 10
 Scripts for finetuning any supported OOD detection methods on pretrained CIL methods are mostly defined in 
 ```scripts/cil_only_finetune/$OOD_METHOD$```. We have benchmarked 6 most common class incremental learning methods in total which are:
 
-- MSP: A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks.
- [Paper](https://arxiv.org/abs/1610.02136). Note that the name of this ood scoring function is flexibly inside the code which could be ```msp``` or ```baseood```.
-- ODIN: Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks.
- [Paper](https://arxiv.org/abs/1706.02690)
-- EBO: Energy-based Out-of-distribution Detection.
- [Paper](https://arxiv.org/abs/2010.03759)
-- KLM: Scaling Out-of-Distribution Detection for Real-World Settings. [Paper](https://proceedings.mlr.press/v162/hendrycks22a/hendrycks22a.pdf)
 
-and including our proposed baseling **BER**. You can choose one of these 4 supported CIL models as pretrained CIL methods.
+
+and including our proposed baseling **BER**. 
+
+Note that the pretrained CIL model should be prepared first.You can choose one of these 4 supported CIL models as pretrained CIL methods, which is the required parameter.
 
 #### How to run
-An example of finetuning OOD detection method REGMIX on CIL model iCaRL with 10 tasks on cifar100 dataset is shown below:
+An example of fine-tuning-based OOD detection method REGMIX on CIL model iCaRL with 10 tasks on cifar100 dataset is shown below:
 ```
 bash scripts/cil_only_finetune/regmix/cifar100_train_cil.sh icarl 10
 ```
-
-Note that the pretrained CIL model should be prepared first.
 
 
 
 ### Testing OOD scoring function on finetuned CIL model
 Scripts for testing ood performance of finetuned CIL model are mostly stored in ```scripts/ood_after_cil_finetune/$OOD_METHOD$```.
 
+Note that the finetuned CIL model should be prepared first, You can choose one of these 4 supported CIL models as finetuned CIL methods, which is the required parameter.
 
 #### How to run
 An example of testing the OOD detection method REGMIX finetuned CIL model of iCaRL on CIFAR100 with 10 tasks is shown below
@@ -171,4 +166,4 @@ An example of testing the OOD detection method REGMIX finetuned CIL model of iCa
 bash scripts/ood_after_cil_finetune/regmix/cifar100_test_ood.sh icarl 10
 ```
 
-Note that the finetuned CIL model should be prepared first.
+
