@@ -74,6 +74,7 @@ After training an class incremental learning model, we can freeze the feature ex
 Furthermore, we only can use the current task ID data to train this extra classifier, so the data split is the same as above.
 
 <b>3. OOD dataset for testing CIL model </b>
+
 After training an class incremental learning model, we should test its performance on ood detection score using other ood dataset.
 
 Experiments should be conducted on both small scale and large scale dataset to demonstrate model's robustness:
