@@ -58,12 +58,12 @@ At each task, a collection of data samples from current task along with an exemp
     - 5 tasks: 20 classes per each task
     - 10 tasks: 10 classes per each task
     - 20 tasks: 5 classes per each task
-    - exemplar size: 2,000
+    - exemplar size for different task settings: 2,000
 - imagenet1k: 1000 classes in total with 3 main settings:
     - 5 tasks: 200 classes per each task
     - 10 tasks: 100 classes per each task
     - 20 tasks: 500 classes per each task
-    - exemplar size: 20,000
+    - exemplar size for different task settings: 20,000
 
 These data setting for training incremental learning model will be automatically set up once you run the training script. For more information about how data is set up, please refer to main code of loading data ```opencil/datasets/data_manager_pycil.py``` which is called via ```get_datamanager``` inside ```opencil/datasets/utils.py```.
 
