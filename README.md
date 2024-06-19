@@ -86,8 +86,6 @@ Experiments should be conducted on both small scale and large scale dataset to d
     - nearood: species, inaturalist, openimage_o, imagenet_o.
     - farood: texture, mnist.
 
-## Weights
-To be updated
 
 ## Usage
 Scripts are mainly used in this repository. They are defined in ```scripts``` and there are four main types of scripts:
